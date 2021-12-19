@@ -1,17 +1,6 @@
-function LoveMatchForm() {
-    const generateMatchPercentage = (event) => {
-        event.preventDefault();
-
-        console.log(event.target[0].value);
-        console.log(event.target[1].value);
-
-        //Reset values
-        event.target[0].value = "";
-        event.target[1].value = "";
-    }
-
+const LoveMatchForm = ({onSubmit, firstName, secondName}) => {
     return (
-        <form onSubmit={generateMatchPercentage}>
+        <form onSubmit={onSubmit}>
             <label htmlFor="firstMatchName">Your Name</label>
             <input type="text" id="firstMatchName" />
 
